@@ -1,0 +1,318 @@
+{
+  "catalogVersion": "1.0.0",
+  "generatedAt": "2026-07-22T13:52:10Z",
+  "plugins": [
+    {
+      "slug": "agua-de-florida",
+      "name": "Agua de Florida",
+      "description": "Spiritual cleansing totem-like item for Minecraft",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-agua-de-florida",
+      "releases": [
+        {
+          "version": "2.0.0",
+          "minecraftVersions": [
+            "1.21"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-agua-de-florida/releases/download/v2.0.0/agua-de-florida-2.0.0.jar",
+          "sha256": "10c4352c37996ad0e998ffe0332ac0559de89349d4a4f34d057e6d24aff318f4",
+          "releasedAt": "2026-07-21T01:08:40Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "copper-kingdom",
+      "name": "Copper Kingdom",
+      "description": "Copper-based weapons with mythic lore mechanics including healing, grounding, and storm interactions",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-copper-kingdom",
+      "releases": [
+        {
+          "version": "0.2.1",
+          "minecraftVersions": [
+            "1.21"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-copper-kingdom/releases/download/v0.2.1/copper-kingdom-0.2.1.jar",
+          "sha256": "af1c37c4555e2a6466f12338f5ee1834005365994b7444ee8b25f8dbfddfc8e7",
+          "releasedAt": "2026-07-19T23:02:44Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "curse",
+      "name": "Curse",
+      "description": "A dynamic survival challenge plugin with plague-style siege events",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-curse",
+      "releases": [
+        {
+          "version": "0.2.2",
+          "minecraftVersions": [
+            "1.21"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-curse/releases/download/v0.2.2/curse-0.2.2.jar",
+          "sha256": "8cdea57b75e568f8d955e41934ea161ad9516e1206e75cb2a9d8d73904760176",
+          "releasedAt": "2026-07-20T14:48:00Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "death-depot",
+      "name": "Death Depot",
+      "description": "Control what happens to player inventory upon death",
+      "projectUrl": "https://github.com/carmelosantana/minecraft-death-depot",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-death-depot",
+      "releases": [
+        {
+          "version": "1.1.1",
+          "minecraftVersions": [
+            "1.21"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-death-depot/releases/download/v1.1.1/death-depot-1.1.1.jar",
+          "sha256": "e6c1aa6ba95e72d86333d5a32b270384aa4a6cd396779b8e8cfc060dd443ba3a",
+          "releasedAt": "2026-07-19T23:02:43Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "electric-furnace",
+      "name": "Electric Furnace",
+      "description": "Redstone-powered smelter that recycles metal gear into ingots and fuses mixed metals into alloys",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-electric-furnace",
+      "releases": [
+        {
+          "version": "0.2.1",
+          "minecraftVersions": [
+            "1.21"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-electric-furnace/releases/download/v0.2.1/electric-furnace-0.2.1.jar",
+          "sha256": "b38ee83bc96c2f4a854724b6020df3b04ebdf8c8a5d219339373bbf01e6f77bc",
+          "releasedAt": "2026-07-21T12:24:46Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "gluten-free-bread",
+      "name": "Gluten Free Bread",
+      "description": "A Minecraft plugin that adds gluten-free bread variants with unique health benefits",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-gluten-free-bread",
+      "releases": [
+        {
+          "version": "1.1.3",
+          "minecraftVersions": [
+            "1.21"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-gluten-free-bread/releases/download/v1.1.3/gluten-free-bread-1.1.3.jar",
+          "sha256": "185e61bb9d8b5abe4819a3973200a057a9bdb24cab63471972faa092514bcdc2",
+          "releasedAt": "2026-07-20T14:58:35Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "magic-carpet",
+      "name": "Magic Carpet",
+      "description": "Enchanted rug carried in the off-hand: jump to unfurl it, fly where you look, sneak back down to stow it",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-magic-carpet",
+      "releases": [
+        {
+          "version": "0.1.0",
+          "minecraftVersions": [
+            "26.1"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-magic-carpet/releases/download/v0.1.0/magic-carpet-0.1.0.jar",
+          "sha256": "3e3ac29c71ff342e3ad7c1071c54bb2154735cfa0b43d59f62ebfc10cd2a5a9a",
+          "releasedAt": "2026-07-22T00:01:03Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "ollama",
+      "name": "Ollama",
+      "description": "Minecraft Paper plugin that provides an API wrapper for Ollama integration",
+      "projectUrl": "https://github.com/carmelosantana/minecraft-ollama",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-ollama",
+      "releases": [
+        {
+          "version": "0.2.1",
+          "minecraftVersions": [
+            "1.21"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-ollama/releases/download/v0.2.1/ollama-0.2.1.jar",
+          "sha256": "6ee192ae7e69d9af7fa34e215c729b1d029a9b62d4fed45db5d241c98598a59c",
+          "releasedAt": "2026-07-19T23:02:47Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "starter-pack",
+      "name": "Starter Pack",
+      "description": "A lightweight plugin that gives first-time players a configurable starter inventory",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-starter-pack",
+      "releases": [
+        {
+          "version": "1.1.2",
+          "minecraftVersions": [
+            "1.21"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-starter-pack/releases/download/v1.1.2/starter-pack-1.1.2.jar",
+          "sha256": "c8eaea3a4930320b7d0f884c4dee5547640c37942c145d56fa273c6a3610f261",
+          "releasedAt": "2026-07-20T14:47:59Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "timber-blast",
+      "name": "Timber Blast",
+      "description": "Gunpowder-fuelled axe that fells a whole tree in one swing, charring the struck log into coal",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-timber-blast",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "minecraftVersions": [
+            "1.21"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-timber-blast/releases/download/v1.0.0/timber-blast-1.0.0.jar",
+          "sha256": "63ac1186244f7cba379ad4e59d2cfcf16783e866871e4a7cdc66c9425e9320b1",
+          "releasedAt": "2026-07-21T00:38:44Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "umami",
+      "name": "Umami",
+      "description": "A powerful analytics plugin that tracks player activity through the Umami API",
+      "projectUrl": "https://github.com/carmelosantana/minecraft-umami",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-umami",
+      "releases": [
+        {
+          "version": "1.1.1",
+          "minecraftVersions": [
+            "1.21"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-umami/releases/download/v1.1.1/umami-1.1.1.jar",
+          "sha256": "36b81f769b8ffea7be1cc7bc039556b5d5e0747fc984f183b5dc6cd55cbe975c",
+          "releasedAt": "2026-07-19T23:02:57Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "wild-weather-update",
+      "name": "Wild Weather Update",
+      "description": "Dynamic weather effects plugin for Minecraft with realistic weather patterns and events",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-wild-weather-update",
+      "releases": [
+        {
+          "version": "1.0.2",
+          "minecraftVersions": [
+            "1.21"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-wild-weather-update/releases/download/v1.0.2/wild-weather-update-1.0.2.jar",
+          "sha256": "524c5dd0e0969d1d21c934200e2be9f08deb2b3522403787ba31436d6c93455c",
+          "releasedAt": "2026-07-20T14:48:00Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "worldcrud",
+      "name": "WorldCRUD",
+      "description": "A powerful world management utility plugin for Minecraft servers",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-worldcrud",
+      "releases": [
+        {
+          "version": "1.1.2",
+          "minecraftVersions": [
+            "1.21"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-worldcrud/releases/download/v1.1.2/worldcrud-1.1.2.jar",
+          "sha256": "2494f351aa9982b2cd336ca40c81a20d8617fef68b6d8f81bd72a3c232922d6f",
+          "releasedAt": "2026-07-20T14:47:52Z",
+          "withdrawn": false
+        }
+      ]
+    }
+  ]
+}

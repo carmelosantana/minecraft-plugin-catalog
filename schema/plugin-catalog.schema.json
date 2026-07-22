@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://craftkeeper.dev/schema/plugin-catalog.schema.json",
+  "title": "CraftKeeper Plugin Catalog",
+  "description": "The versioned JSON contract shared by carmelosantana/minecraft-plugin-catalog (the independent catalog repository, which validates every contribution against this exact schema in its own CI) and CraftKeeper's App\\Catalog\\Sources\\CraftKeeperCatalogSource, which reads it. See docs/architecture/plugin-catalog.md for the handoff. additionalProperties is deliberately left permissive (true) at every level so a future catalog can add optional fields without breaking older CraftKeeper installs pinned to an older contract version — only the fields listed here as required are load-bearing.",
+  "type": "object",
+  "required": ["catalogVersion", "plugins"],
+  "properties": {
+    "catalogVersion": {
+      "type": "string",
+      "description": "Semantic version of THIS JSON contract (not of any individual plugin release).",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the catalog repository's build produced this document. Optional but recommended."
+    },
+    "plugins": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/plugin" }
+    }
+  },
+  "$defs": {
+    "plugin": {
+      "type": "object",
+      "required": [
+        "slug",
+        "name",
+        "description",
+        "projectUrl",
+        "license",
+        "sourceRepository",
+        "releases"
+      ],
+      "properties": {
+        "slug": {
+          "type": "string",
+          "description": "Stable, unique-within-catalog identifier. This is the project identity half of App\\Catalog\\Data\\PluginReleaseId's dedup key (source + projectId) — never the display name.",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "projectUrl": { "type": "string", "format": "uri" },
+        "license": { "type": "string", "minLength": 1 },
+        "sourceRepository": { "type": "string", "format": "uri" },
+        "releases": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/release" }
+        }
+      }
+    },
+    "release": {
+      "type": "object",
+      "required": [
+        "version",
+        "minecraftVersions",
+        "platforms",
+        "dependencies",
+        "downloadUrl",
+        "sha256",
+        "releasedAt"
+      ],
+      "properties": {
+        "version": { "type": "string", "minLength": 1 },
+        "minecraftVersions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "platforms": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": ["paper", "spigot", "bukkit", "folia", "velocity", "bungeecord"]
+          }
+        },
+        "dependencies": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/dependency" }
+        },
+        "downloadUrl": { "type": "string", "format": "uri" },
+        "sha256": {
+          "type": "string",
+          "description": "Lowercase hex SHA-256 of the exact downloadable artifact. This is the EXPECTED hash CraftKeeper carries; Task 15 is responsible for verifying a downloaded artifact against it.",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "releasedAt": { "type": "string", "format": "date-time" },
+        "withdrawn": {
+          "type": "boolean",
+          "description": "true if the catalog maintainers pulled this release (e.g. a security issue). Withdrawn releases are still schema-valid and immutable by checksum — they are excluded from active search results but remain individually resolvable so an already-installed withdrawn version can still be identified/inspected."
+        },
+        "signature": { "$ref": "#/$defs/signature" }
+      }
+    },
+    "dependency": {
+      "type": "object",
+      "required": ["name", "required"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "required": { "type": "boolean" },
+        "minVersion": { "type": ["string", "null"] }
+      }
+    },
+    "signature": {
+      "type": "object",
+      "description": "Present only when the catalog repository signed this release's artifact. Optional at the release level, but every field here is required once a signature object is present at all.",
+      "required": ["algorithm", "signature", "keyUrl"],
+      "properties": {
+        "algorithm": { "type": "string", "minLength": 1 },
+        "signature": { "type": "string", "minLength": 1 },
+        "keyUrl": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}

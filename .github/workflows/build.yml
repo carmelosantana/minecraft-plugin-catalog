@@ -1,0 +1,123 @@
+name: Catalog
+
+on:
+  # Regenerate on a schedule so a new plugin release reaches the catalog
+  # without anyone remembering to push. Nothing here consumes a webhook from
+  # the plugin repositories, so this cadence IS the freshness guarantee.
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate catalog.json against the schema
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: '3.12'
+
+      - run: pip install --quiet jsonschema
+
+      # The published file is the product, so it is validated on every change
+      # — including a hand edit that never went through the generator.
+      - name: Validate
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          from jsonschema import Draft7Validator
+
+          schema = json.load(open('schema/plugin-catalog.schema.json'))
+          catalog = json.load(open('catalog.json'))
+          errors = sorted(Draft7Validator(schema).iter_errors(catalog), key=lambda e: e.path)
+
+          for e in errors:
+              print(f"::error::{'.'.join(str(p) for p in e.path) or '<root>'}: {e.message}")
+
+          print(f"{len(catalog['plugins'])} plugins, {len(errors)} schema errors")
+          sys.exit(1 if errors else 0)
+          PY
+
+      # Every downloadUrl must actually resolve. A catalog that lists a
+      # release GitHub has since deleted is worse than one that omits it:
+      # CraftKeeper would offer an install that cannot complete.
+      - name: Check every downloadUrl resolves
+        run: |
+          python3 - <<'PY'
+          import json, sys, urllib.request
+
+          failures = []
+          for plugin in json.load(open('catalog.json'))['plugins']:
+              for release in plugin['releases']:
+                  url = release['downloadUrl']
+                  request = urllib.request.Request(url, method='HEAD')
+                  try:
+                      with urllib.request.urlopen(request, timeout=30) as response:
+                          if response.status >= 400:
+                              failures.append(f"{plugin['slug']} {release['version']}: HTTP {response.status}")
+                  except Exception as error:
+                      failures.append(f"{plugin['slug']} {release['version']}: {error}")
+
+          for failure in failures:
+              print(f"::error::{failure}")
+          sys.exit(1 if failures else 0)
+          PY
+
+  regenerate:
+    name: Regenerate from the plugin roster
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: '3.12'
+
+      - name: Build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 scripts/build-catalog.py "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > catalog.next.json
+          mv catalog.next.json catalog.json
+
+      # `generatedAt` changes on every run, so committing on any diff would
+      # produce a daily empty-content commit. Compare everything else.
+      - name: Commit only when the plugin data actually changed
+        run: |
+          if git diff --quiet -- catalog.json; then
+            echo "No change at all."
+            exit 0
+          fi
+
+          CHANGED=$(python3 - <<'PY'
+          import json, subprocess
+          old = json.loads(subprocess.run(
+              ['git', 'show', 'HEAD:catalog.json'], capture_output=True, text=True).stdout)
+          new = json.load(open('catalog.json'))
+          print('yes' if old.get('plugins') != new.get('plugins') else 'no')
+          PY
+          )
+
+          if [ "$CHANGED" != "yes" ]; then
+            echo "Only generatedAt moved; leaving catalog.json alone."
+            git checkout -- catalog.json
+            exit 0
+          fi
+
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore: regenerate catalog from the plugin roster' -- catalog.json
+          git push
