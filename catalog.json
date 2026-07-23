@@ -1,6 +1,6 @@
 {
   "catalogVersion": "1.0.0",
-  "generatedAt": "2026-07-22T13:52:10Z",
+  "generatedAt": "2026-07-23T07:11:26Z",
   "plugins": [
     {
       "slug": "agua-de-florida",
@@ -107,17 +107,17 @@
       "sourceRepository": "https://github.com/carmelosantana/minecraft-electric-furnace",
       "releases": [
         {
-          "version": "0.2.1",
+          "version": "0.3.1",
           "minecraftVersions": [
-            "1.21"
+            "26.1"
           ],
           "platforms": [
             "paper"
           ],
           "dependencies": [],
-          "downloadUrl": "https://github.com/carmelosantana/minecraft-electric-furnace/releases/download/v0.2.1/electric-furnace-0.2.1.jar",
-          "sha256": "b38ee83bc96c2f4a854724b6020df3b04ebdf8c8a5d219339373bbf01e6f77bc",
-          "releasedAt": "2026-07-21T12:24:46Z",
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-electric-furnace/releases/download/v0.3.1/electric-furnace-0.3.1.jar",
+          "sha256": "c93c18f7e8baf6aecc45426ee7bb04434364a6224a7b51a63d8e3c116ad86fd9",
+          "releasedAt": "2026-07-22T19:45:12Z",
           "withdrawn": false
         }
       ]
@@ -149,10 +149,58 @@
     {
       "slug": "magic-carpet",
       "name": "Magic Carpet",
-      "description": "Enchanted rug carried in the off-hand: jump to unfurl it, fly where you look, sneak back down to stow it",
+      "description": "Enchanted rug carried in either hand: jump to unfurl it, fly, sneak back down to stow it",
       "projectUrl": "https://xpfarm.org",
       "license": "AGPL-3.0",
       "sourceRepository": "https://github.com/carmelosantana/minecraft-magic-carpet",
+      "releases": [
+        {
+          "version": "0.1.1",
+          "minecraftVersions": [
+            "26.1"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-magic-carpet/releases/download/v0.1.1/magic-carpet-0.1.1.jar",
+          "sha256": "cd7fb0b7203547a20270525ddc8033bed56cf726e835a79aea7ade45ff6a7999",
+          "releasedAt": "2026-07-22T18:15:01Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "ollama",
+      "name": "Ollama",
+      "description": "Minecraft Paper plugin that provides an API wrapper for Ollama integration",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-ollama",
+      "releases": [
+        {
+          "version": "0.4.0",
+          "minecraftVersions": [
+            "26.1"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-ollama/releases/download/v0.4.0/ollama-0.4.0.jar",
+          "sha256": "4bc36a9ea8ef2daf8a22e528f23026c70119a5adfce121c082e8c601b1825a9c",
+          "releasedAt": "2026-07-23T02:45:13Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "pizza",
+      "name": "Pizza",
+      "description": "Touch-friendly in-game menu that runs everyday xpfarm tasks for younger players",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-pizza",
       "releases": [
         {
           "version": "0.1.0",
@@ -163,33 +211,9 @@
             "paper"
           ],
           "dependencies": [],
-          "downloadUrl": "https://github.com/carmelosantana/minecraft-magic-carpet/releases/download/v0.1.0/magic-carpet-0.1.0.jar",
-          "sha256": "3e3ac29c71ff342e3ad7c1071c54bb2154735cfa0b43d59f62ebfc10cd2a5a9a",
-          "releasedAt": "2026-07-22T00:01:03Z",
-          "withdrawn": false
-        }
-      ]
-    },
-    {
-      "slug": "ollama",
-      "name": "Ollama",
-      "description": "Minecraft Paper plugin that provides an API wrapper for Ollama integration",
-      "projectUrl": "https://github.com/carmelosantana/minecraft-ollama",
-      "license": "AGPL-3.0",
-      "sourceRepository": "https://github.com/carmelosantana/minecraft-ollama",
-      "releases": [
-        {
-          "version": "0.2.1",
-          "minecraftVersions": [
-            "1.21"
-          ],
-          "platforms": [
-            "paper"
-          ],
-          "dependencies": [],
-          "downloadUrl": "https://github.com/carmelosantana/minecraft-ollama/releases/download/v0.2.1/ollama-0.2.1.jar",
-          "sha256": "6ee192ae7e69d9af7fa34e215c729b1d029a9b62d4fed45db5d241c98598a59c",
-          "releasedAt": "2026-07-19T23:02:47Z",
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-pizza/releases/download/v0.1.0/pizza-0.1.0.jar",
+          "sha256": "b8ca226247d14ef1bf33014fd2526d0ab1abd74c9cd45bb8450b5620c8793b9b",
+          "releasedAt": "2026-07-23T00:24:11Z",
           "withdrawn": false
         }
       ]
@@ -214,6 +238,30 @@
           "downloadUrl": "https://github.com/carmelosantana/minecraft-starter-pack/releases/download/v1.1.2/starter-pack-1.1.2.jar",
           "sha256": "c8eaea3a4930320b7d0f884c4dee5547640c37942c145d56fa273c6a3610f261",
           "releasedAt": "2026-07-20T14:47:59Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "super-trash",
+      "name": "Super Trash",
+      "description": "Redstone-powered sink that consumes junk items and pays the owner back in experience",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-super-trash",
+      "releases": [
+        {
+          "version": "0.1.0",
+          "minecraftVersions": [
+            "26.1"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-super-trash/releases/download/v0.1.0/super-trash-0.1.0.jar",
+          "sha256": "828ef16cd6a54f4e9fccd232e078a0f1198512a83bf39ddbfda57e5b7d3dc814",
+          "releasedAt": "2026-07-22T11:49:37Z",
           "withdrawn": false
         }
       ]
