@@ -1,6 +1,6 @@
 {
   "catalogVersion": "1.0.0",
-  "generatedAt": "2026-07-23T07:11:26Z",
+  "generatedAt": "2026-07-25T07:04:38Z",
   "plugins": [
     {
       "slug": "agua-de-florida",
@@ -203,7 +203,7 @@
       "sourceRepository": "https://github.com/carmelosantana/minecraft-pizza",
       "releases": [
         {
-          "version": "0.1.0",
+          "version": "0.2.0",
           "minecraftVersions": [
             "26.1"
           ],
@@ -211,9 +211,9 @@
             "paper"
           ],
           "dependencies": [],
-          "downloadUrl": "https://github.com/carmelosantana/minecraft-pizza/releases/download/v0.1.0/pizza-0.1.0.jar",
-          "sha256": "b8ca226247d14ef1bf33014fd2526d0ab1abd74c9cd45bb8450b5620c8793b9b",
-          "releasedAt": "2026-07-23T00:24:11Z",
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-pizza/releases/download/v0.2.0/pizza-0.2.0.jar",
+          "sha256": "ce82307e46870bf3f923cf9c3b84acf9bc347e8d7dda3a0d0f3576bee6da8761",
+          "releasedAt": "2026-07-25T00:36:22Z",
           "withdrawn": false
         }
       ]
