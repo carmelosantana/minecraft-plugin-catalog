@@ -1,6 +1,6 @@
 {
   "catalogVersion": "1.0.0",
-  "generatedAt": "2026-07-27T07:28:59Z",
+  "generatedAt": "2026-07-29T07:14:59Z",
   "plugins": [
     {
       "slug": "agua-de-florida",
@@ -35,7 +35,7 @@
       "sourceRepository": "https://github.com/carmelosantana/minecraft-copper-kingdom",
       "releases": [
         {
-          "version": "0.2.1",
+          "version": "0.3.0",
           "minecraftVersions": [
             "1.21"
           ],
@@ -43,9 +43,9 @@
             "paper"
           ],
           "dependencies": [],
-          "downloadUrl": "https://github.com/carmelosantana/minecraft-copper-kingdom/releases/download/v0.2.1/copper-kingdom-0.2.1.jar",
-          "sha256": "af1c37c4555e2a6466f12338f5ee1834005365994b7444ee8b25f8dbfddfc8e7",
-          "releasedAt": "2026-07-19T23:02:44Z",
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-copper-kingdom/releases/download/v0.3.0/copper-kingdom-0.3.0.jar",
+          "sha256": "ca1eb6be19df6035f5177d53d56609725bed6518545e9053b3b4bc0004a6e705",
+          "releasedAt": "2026-07-28T17:10:40Z",
           "withdrawn": false
         }
       ]
@@ -118,6 +118,30 @@
           "downloadUrl": "https://github.com/carmelosantana/minecraft-electric-furnace/releases/download/v0.3.1/electric-furnace-0.3.1.jar",
           "sha256": "c93c18f7e8baf6aecc45426ee7bb04434364a6224a7b51a63d8e3c116ad86fd9",
           "releasedAt": "2026-07-22T19:45:12Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "farmers-market",
+      "name": "Farmers Market",
+      "description": "Player-run market economy where diamonds buy goods, XP pays the fees, and vendors shaped like wandering traders sell your stock around the clock",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-farmers-market",
+      "releases": [
+        {
+          "version": "0.2.0",
+          "minecraftVersions": [
+            "26.1"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-farmers-market/releases/download/v0.2.0/farmers-market-0.2.0.jar",
+          "sha256": "5a1017312a611ffa29f4fd16e3c86a16ce4c3ab3ce17704092dc4fb1da1c1f12",
+          "releasedAt": "2026-07-28T18:50:41Z",
           "withdrawn": false
         }
       ]
@@ -203,7 +227,7 @@
       "sourceRepository": "https://github.com/carmelosantana/minecraft-pizza",
       "releases": [
         {
-          "version": "0.3.0",
+          "version": "0.5.1",
           "minecraftVersions": [
             "26.1"
           ],
@@ -211,9 +235,9 @@
             "paper"
           ],
           "dependencies": [],
-          "downloadUrl": "https://github.com/carmelosantana/minecraft-pizza/releases/download/v0.3.0/pizza-0.3.0.jar",
-          "sha256": "2f45325d60a5d61660c910724c8bb0853277d568d41e318234bb062010274986",
-          "releasedAt": "2026-07-26T20:47:04Z",
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-pizza/releases/download/v0.5.1/pizza-0.5.1.jar",
+          "sha256": "f8a573325a40f8693e3f119241f76e3f79a5161064ae74f5af435cb9b7172dac",
+          "releasedAt": "2026-07-28T17:28:24Z",
           "withdrawn": false
         }
       ]
