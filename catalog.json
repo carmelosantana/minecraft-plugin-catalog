@@ -1,6 +1,6 @@
 {
   "catalogVersion": "1.0.0",
-  "generatedAt": "2026-07-29T07:14:59Z",
+  "generatedAt": "2026-07-31T07:18:28Z",
   "plugins": [
     {
       "slug": "agua-de-florida",
@@ -70,6 +70,30 @@
           "downloadUrl": "https://github.com/carmelosantana/minecraft-curse/releases/download/v0.2.2/curse-0.2.2.jar",
           "sha256": "8cdea57b75e568f8d955e41934ea161ad9516e1206e75cb2a9d8d73904760176",
           "releasedAt": "2026-07-20T14:48:00Z",
+          "withdrawn": false
+        }
+      ]
+    },
+    {
+      "slug": "daily-q",
+      "name": "DailyQ",
+      "description": "Daily quests, login-streak rewards, and a claim mailbox \u2014 the first slice of the xpfarm questing system",
+      "projectUrl": "https://xpfarm.org",
+      "license": "AGPL-3.0",
+      "sourceRepository": "https://github.com/carmelosantana/minecraft-daily-q",
+      "releases": [
+        {
+          "version": "0.1.0",
+          "minecraftVersions": [
+            "26.1"
+          ],
+          "platforms": [
+            "paper"
+          ],
+          "dependencies": [],
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-daily-q/releases/download/v0.1.0/daily-q-0.1.0.jar",
+          "sha256": "9cd9122bc8cc88b235e7486ceac1d1ae6b161ad0dd03f2284b46f2c85ca2bfbd",
+          "releasedAt": "2026-07-30T17:01:18Z",
           "withdrawn": false
         }
       ]
@@ -227,7 +251,7 @@
       "sourceRepository": "https://github.com/carmelosantana/minecraft-pizza",
       "releases": [
         {
-          "version": "0.5.1",
+          "version": "0.6.0",
           "minecraftVersions": [
             "26.1"
           ],
@@ -235,9 +259,9 @@
             "paper"
           ],
           "dependencies": [],
-          "downloadUrl": "https://github.com/carmelosantana/minecraft-pizza/releases/download/v0.5.1/pizza-0.5.1.jar",
-          "sha256": "f8a573325a40f8693e3f119241f76e3f79a5161064ae74f5af435cb9b7172dac",
-          "releasedAt": "2026-07-28T17:28:24Z",
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-pizza/releases/download/v0.6.0/pizza-0.6.0.jar",
+          "sha256": "acb109fccc21ac7ea48afba6d99e8ef754b3915096d6b756f784e7e4f9127f10",
+          "releasedAt": "2026-07-30T17:18:38Z",
           "withdrawn": false
         }
       ]
