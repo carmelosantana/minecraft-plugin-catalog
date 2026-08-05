@@ -1,6 +1,6 @@
 {
   "catalogVersion": "1.0.0",
-  "generatedAt": "2026-07-31T07:18:28Z",
+  "generatedAt": "2026-08-05T07:13:40Z",
   "plugins": [
     {
       "slug": "agua-de-florida",
@@ -155,7 +155,7 @@
       "sourceRepository": "https://github.com/carmelosantana/minecraft-farmers-market",
       "releases": [
         {
-          "version": "0.2.0",
+          "version": "0.3.0",
           "minecraftVersions": [
             "26.1"
           ],
@@ -163,9 +163,9 @@
             "paper"
           ],
           "dependencies": [],
-          "downloadUrl": "https://github.com/carmelosantana/minecraft-farmers-market/releases/download/v0.2.0/farmers-market-0.2.0.jar",
-          "sha256": "5a1017312a611ffa29f4fd16e3c86a16ce4c3ab3ce17704092dc4fb1da1c1f12",
-          "releasedAt": "2026-07-28T18:50:41Z",
+          "downloadUrl": "https://github.com/carmelosantana/minecraft-farmers-market/releases/download/v0.3.0/farmers-market-0.3.0.jar",
+          "sha256": "ff267ceeb75f7d5978b4f55cee0f9d51a1900b937fba6228a34a590e4b96a56e",
+          "releasedAt": "2026-08-04T19:43:37Z",
           "withdrawn": false
         }
       ]
